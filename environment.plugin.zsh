@@ -37,6 +37,7 @@ unsetopt CHECK_JOBS       # Don't report on jobs when shell exit.
 # Grep
 #
 
+export GREP_COLOR='1;33'
 export GREP_OPTIONS='--color=auto'
 
 #
