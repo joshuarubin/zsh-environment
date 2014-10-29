@@ -20,6 +20,8 @@ setopt BRACE_CCL          # Allow brace character class list expansion.
 setopt COMBINING_CHARS    # Combine zero-length punctuation characters (accents)
                           # with the base character.
 setopt RC_QUOTES          # Allow 'Henry''s Garage' instead of 'Henry'\''s Garage'.
+setopt LOCAL_OPTIONS      # Allow functions to have local options
+setopt LOCAL_TRAPS        # Allow functions to have local traps
 unsetopt MAIL_WARNING     # Don't print a warning message if a mail file has been accessed.
 
 #
