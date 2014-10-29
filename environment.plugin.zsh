@@ -51,3 +51,19 @@ export LESS_TERMCAP_se=$'\E[0m'          # Ends standout-mode.
 export LESS_TERMCAP_so=$'\E[00;47;30m'   # Begins standout-mode.
 export LESS_TERMCAP_ue=$'\E[0m'          # Ends underline.
 export LESS_TERMCAP_us=$'\E[01;32m'      # Begins underline.
+
+#
+# Editor
+#
+
+if (( $+commands[mvim] )); then
+  export EDITOR="mvim"
+  export VISUAL="mvim"
+else
+  export EDITOR="vim"
+  export VISUAL="vim"
+fi
+
+if (( $+commands[brew] )); then
+  export BREW_PREFIX=$(brew --prefix)
+fi
