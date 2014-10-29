@@ -52,6 +52,14 @@ export LESS_TERMCAP_so=$'\E[00;47;30m'   # Begins standout-mode.
 export LESS_TERMCAP_ue=$'\E[0m'          # Ends underline.
 export LESS_TERMCAP_us=$'\E[01;32m'      # Begins underline.
 
-if (( $+commands[brew] )); then
-  export BREW_PREFIX=$(brew --prefix)
+#
+# OS X
+#
+
+if [[ "$OSTYPE" == darwin* ]]; then
+  export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
+
+  if (( $+commands[brew] )); then
+    export BREW_PREFIX=$(brew --prefix)
+  fi
 fi
